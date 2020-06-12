@@ -1,6 +1,8 @@
+require('dotenv').config()
+
 import React from 'react';
 const axios = require('axios').default;
-
+console.log(process.env.MONGOURL)
 function App(props) { 
     const [resultData , setResultdata] = React.useState("1")
     axios.get('/hello')
