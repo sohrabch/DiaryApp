@@ -1,22 +1,20 @@
-require('dotenv').config()
-
 import React from 'react';
+require('dotenv').config()
 const axios = require('axios').default;
-console.log(process.env.MONGOURL)
 function App(props) { 
     const [resultData , setResultdata] = React.useState("1")
-    axios.get('/hello')
+    
+    axios.post("http://localhost/posts",)
   .then(function (response) {
-    console.log(response.data)
-   setResultdata(response.data)
+    console.log(response.data.message)
+   setResultdata(response.data.message)
   })
   .catch(function (error) {
     // handle error
     setResultdata("error happened")
   })
-  .then(function () {
-    // always executed
-  });
+
+
 
   
 
