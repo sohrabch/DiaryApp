@@ -1,26 +1,25 @@
 import React from 'react';
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import Container from '@material-ui/core/Container';
+
+import About from "./about"
+import Home from "./home"
+import NavBar from "./navbar"
+import Posts from "./posts"
 require('dotenv').config()
-const axios = require('axios').default;
 function App(props) { 
-    const [resultData , setResultdata] = React.useState("1")
+    return    <Router>
     
-    axios.post("http://localhost/posts",)
-  .then(function (response) {
-    console.log(response.data.message)
-   setResultdata(response.data.message)
-  })
-  .catch(function (error) {
-    // handle error
-    setResultdata("error happened")
-  })
+    <NavBar />
+    <Container fixed>
+    <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/posts" component={Posts} />
+      
+      </Container>
+     
+  </Router>
 
-
-
-  
-
-
-    return  <div> <h1> {resultData}</h1>   
-</div>
 
  }
 
@@ -29,3 +28,4 @@ function App(props) {
 
 export default App
 
+ 
