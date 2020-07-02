@@ -12,7 +12,7 @@ function App(props) {
     
     {/* <NavBar /> */}
     <Container fixed>
-    <Route exact path="/" component={Home} />
+    <Route exact path="/" component={CarSearch} /> {/* change to Home */}
       <Route path="/about" component={About} />
       <Route path="/posts" component={Posts} />
       <Route path="/carsearch" component={CarSearch}/>
