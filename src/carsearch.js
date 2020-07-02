@@ -117,7 +117,7 @@ function CarSearch() {
               },
             };
             
-            let url = "http://localhost/volvo/searchvin";
+            let url = "http://sohrabch.info/volvo/searchvin";
             axios
               .post(url, qs.stringify(requestBody), config)
               .then((result) => {
