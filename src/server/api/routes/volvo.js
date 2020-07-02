@@ -36,7 +36,7 @@ router.post("/searchvin" , function(req, result ) {
             }
             else {
                 result.status(200).json({
-                    message : "Your car was  not found in the list. everything seems ok ",
+                    message : "Your car was  not found in the list.",
                   });
             }
         }
@@ -57,7 +57,7 @@ router.post("/searchvin" , function(req, result ) {
                 console.log(res)
                 if( res != null) {
                      result.status(200).json({
-                        message : "vin number found. please take your car to the nearest dealer",
+                        message : "registration number found. please take your car to the nearest dealer",
                       });
                 }
                 else {
