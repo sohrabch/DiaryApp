@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const postRoute = require("./routes/posts");
 const userRoute = require("./routes/users");
+const carRoute = require("./routes/volvo");
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 // Routes which should handle requests
 app.use("/posts", postRoute);
 app.use("/users", userRoute);
+app.use("/volvo" , carRoute);
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
